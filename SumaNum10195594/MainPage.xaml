@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:SumaNum10195594.ViewModels"
+             x:Class="SumaNum10195594.MainPage"
+             Title="Ejercicio 1: Suma de dos números">
+    <ContentPage.BindingContext>
+        <viewmodel:MainViewModel></viewmodel:MainViewModel>
+    </ContentPage.BindingContext>
+
+    <VerticalStackLayout  Padding="20" Spacing="5">
+        <Entry Placeholder="Digite el primer número :" Text="{Binding Numero1}"/>
+        <Entry Placeholder="Digite el segundo número :" Text="{Binding Numero2}"/>
+        <Entry Placeholder="Total de la suma :" Text="{Binding Total}"/>
+
+        <Button Text="Calcular Suma" Command="{Binding SumaTotalCommand}"/>
+    </VerticalStackLayout>
+
+</ContentPage>
